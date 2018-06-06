@@ -1,0 +1,120 @@
+\ifx\allfiles\undefined
+\documentclass[UTF8]{ctexart}
+\title{以太坊架构设计}
+\author{邹远春}
+\date{}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{verbatim}
+\begin{document}
+\maketitle
+\else
+\chapter{以太坊架构设计}
+\fi
+\section{核心概念}
+
+\paragraph{EVM}
+以太坊虚拟机，轻量级的虚拟机环境，是以太坊智能合约的执行环境。
+
+\paragraph{Account}
+
+账户分为合约账户和外部账户。合约账户主要存储执行的合约代码；外部账户对应用户账户。
+
+\paragraph{Transaction}
+
+以太坊网络上的交易，从一个账户到另一个账户的消息，包括以太币或智能合约参数。
+
+\paragraph{Gas}
+
+以太坊执行智能合约的燃料。
+
+\paragraph{Miner}
+挖矿，以太坊网络通过共识算法来保证网络的安全运行。
+
+\paragraph{P2P网络通信}
+以太坊分布式网络中所有节点地位平等，没有中心化服务器。
+
+\section{架构设计}
+
+椭圆曲线数字签名Secp256k1
+
+梅克尔树链式存储
+
+MTP(Merkle Patricia Trie)
+
+账户交易模型
+
+LevelDB数据存储
+
+P2P网络通信
+
+Ethan/Casper共识算法
+
+挖矿激励
+
+图灵完备的智能合约执行环境EVM
+
+\section{源码目录结构}
+
+\paragraph{accounts}
+以太坊账户管理
+
+\paragraph{bmt}
+二进制MPT的实现
+
+\paragraph{build}
+主要是一些编译和构建的脚本与配置
+
+\paragraph{cmd}
+命令行工具
+
+\subparagraph{abigen} 合约接口生成工具
+\subparagraph{bootnode}实现网络发现的节点
+\subparagraph{clef}
+\subparagraph{ethkey}
+\subparagraph{evm} 以太坊虚拟机
+\subparagraph{faucet}
+\subparagraph{geth} 以太坊命令行客户端
+\subparagraph{intrnal}
+\subparagraph{p2psim}
+\subparagraph{puppeth} 创建一个新的以太坊网络的向导
+\subparagraph{rlpdump} 提供RLP数据的格式化输出
+\subparagraph{swarm} swarm网络的接入点
+\subparagraph{utils} 公共的组件
+\subparagraph{wnode} 这是一个简单的Whisper节点。 它可以用作独立的引导节点。此外，可以用于不同的测试和诊断目的。
+
+\paragraph{common} 一些公共的工具类
+\paragraph{consensus} 共识算法
+\paragraph{console}
+\paragraph{containers}
+\paragraph{contracts}
+\paragraph{core} 核心数据结构与算法
+\paragraph{crypto} 加密、数字签名和哈希算法
+\paragraph{dashboard}
+\paragraph{eth} 实现以太坊协议
+\paragraph{ethclient} 以太坊RPC客户端
+\paragraph{ethdb} 以太坊数据库，主要是LevelDB相关接口
+\paragraph{ethstats}
+\paragraph{event} 事件处理
+\paragraph{internal}
+\paragraph{les}
+\paragraph{light} 实现为以太坊轻量级客户端提供按需检索的功能
+\paragraph{log}
+\paragraph{metrics} 提供磁盘计数器
+\paragraph{miner} 挖矿
+\paragraph{mobile} 移动端
+\paragraph{node} 多种类型的节点
+\paragraph{p2p} p2p网络通信
+\paragraph{params}
+\paragraph{rlp} 以太坊序列化和反序列化
+\paragraph{rpc} 远程方法调用
+\paragraph{signer}
+\paragraph{swarm} swarm网络处理
+\paragraph{tests}
+\paragraph{trie} MPT实现
+\paragraph{vendor}
+\paragraph{whisper}  whisper节点协议
+\ifx\allfiles\undefined
+\end{document}
+\fi
