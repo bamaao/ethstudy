@@ -10,6 +10,14 @@
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{graphicx, subfig}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{%
+	breaklines=true,
+	tabsize=2
+}
+\newcommand\Emph{\textbf}
 \makeindex
 \bibliographystyle{plain}
 \begin{document}
@@ -47,9 +55,11 @@
 
 \part{源码学习}
 
-\input{chapter4} %
+\input{chapter4} % 以太坊架构设计
 
-\input{chapter5} %
+\input{chapter5} % 以太坊启动/区块和教育，合约和虚拟机
+
+\input{chapter6} % 以太坊共识算法
 
 \include{angiosperms}
 
